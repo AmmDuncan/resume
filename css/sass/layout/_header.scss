@@ -1,0 +1,332 @@
+.header.dev {
+  position: relative;
+  max-height: 100%;
+  min-height: 100vh;
+  height: 100%;
+
+  display: flex;
+  align-items: stretch;
+  box-sizing: border-box;
+  padding: 6.125rem 1rem 1.5rem;
+
+  background: #6c56db;
+  background: $color-primary-dark;
+  // background: #eeebfa;
+
+  .hero {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    // height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 3rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.75rem 1rem rgba($color-primary-darkest, 0.4),
+      0 0.125rem 0.35rem rgba($color-primary-darkest, 0.15);
+
+    background: #fefeff;
+
+    @media (max-width: $tab-sm) {
+      padding: 3rem 0;
+    }
+  }
+}
+
+.hero .content {
+  max-width: 45rem;
+  box-sizing: border-box;
+  // padding-top: 22.5vh;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  h3 {
+    margin: 1rem 0 1.5rem;
+    font-size: $font-size-h3-sm;
+    font-family: "sora", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.4;
+
+    @media (max-width: $tab-md) {
+      font-size: $font-size-body-larger;
+      margin-bottom: 1.25rem;
+    }
+    @media (max-width: $mob-md) {
+      font-size: 1.25rem;
+      // margin-bottom: 1.25rem;
+    }
+  }
+
+  h1, h2 {
+    margin-bottom: 1.25rem;
+    font-size: $font-size-display;
+    font-weight: 600;
+    letter-spacing: -0.16rem;
+    line-height: 1.05;
+    animation: bounce-in 0.5s ease-out forwards;
+    text-align: center;
+
+    &.go {
+      animation: slide-down-out 0.5s ease-in-out forwards;
+    }
+
+    .highlight {
+      position: relative;
+      display: inline-block;
+      color: $color-primary;
+    }
+
+    @media (max-width: $desk-md) {
+      font-size: $font-size-display-sm;
+    }
+
+    @media (max-width: $tab-md) {
+      font-size: $font-size-display-xsm;
+      max-width: 36rem;
+    }
+
+    @media (max-width: 576px) {
+      font-size: $font-size-h1;
+      max-width: 30rem;
+    }
+
+    @media (max-width: $mob-xlg) {
+      font-size: $font-size-h1;
+      max-width: 26rem;
+    }
+
+    @media (max-width: $mob-md) {
+      font-size: $font-size-h1-sm;
+      max-width: 22rem;
+    }
+
+    @media (max-width: $mob-sm) {
+      font-size: $font-size-h1-xsm;
+      max-width: 22rem;
+    }
+  }
+
+  .ctas {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+
+    .btn {
+      &--primary {
+        margin-right: 1rem;
+      }
+    }
+
+    @media screen and (max-width: $mob-lg) {
+      max-width: 20rem;
+      width: 100%;
+      flex-flow: column;
+      align-items: stretch;
+
+      .btn--primary {
+        margin-bottom: 1rem;
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (min-width: $desk-md) {
+    max-width: 48rem;
+  }
+  @media screen and (max-width: $tab-md) {
+    max-width: 35rem;
+    // padding-top: 17.5vh;
+  }
+}
+
+
+.col-2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 45fr 55fr;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: auto;
+
+  .content {
+    display: block;
+    padding: 3rem 0rem 3.5rem 1rem;
+    text-align: left;
+    margin: 0;
+
+    h3 {
+      margin-bottom: 1.5rem;
+      text-align: left;
+      font-size: $font-size-body-larger;
+      letter-spacing: 0;
+    }
+
+    h2,
+    h1 {
+      margin-left: -0.125rem;
+      margin-bottom: 1.5rem;
+      text-align: left;
+      line-height: 90%;
+      letter-spacing: -4%;
+      text-transform: uppercase;
+    }
+
+    p {
+      max-width: 24rem;
+      margin-bottom: 2rem;
+    }
+
+    .ctas {
+      display: flex;
+      flex-flow: row wrap;
+
+      .btn {
+        &:first-child {
+          @media (max-width: $tab-lg) {
+            margin-right: 0rem;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        @media (max-width: $desk-smd) {
+          white-space: nowrap;
+          margin-top: 1rem;
+          flex-basis: 100%;
+          // max-width: 20rem;
+        }
+      }
+
+      @media (max-width: $desk-smd) {
+        flex-flow: column nowrap;
+        align-items: stretch;
+      }
+
+      @media (max-width: $tab-lg) {
+        margin: auto;
+      }
+    }
+    @media (max-width: $mob-lg) {
+      padding-left: 0;
+    }
+  }
+
+  .illustration {
+    align-self: center;
+    position: relative;
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    .details {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .plus-sign {
+      font-size: $font-size-display;
+      font-weight: 700;
+    }
+
+    .icon {
+      max-width: 10rem;
+      margin-left: -2rem;
+      // filter: saturate(0) brightness(0.95);
+
+      &:hover {
+        filter: saturate(1);
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: $desk-smd) {
+      padding-top: 3rem;
+
+      .details {
+        flex-flow: column nowrap;
+      }
+
+      .plus-sign {
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        font-size: $font-size-h1-sm;
+      }
+
+      .icon {
+        margin: 0;
+        max-width: 8rem;
+      }
+    }
+  }
+  @media (max-width: $desk-smd) {
+    width: 90%;
+    grid-template-columns: 50fr 50fr;
+
+    .content {
+      margin: auto;
+    }
+  }
+
+  @media (max-width: $tab-lg) {
+    box-sizing: border-box;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    .content {
+      margin: auto;
+
+      h3,
+      h1,
+      h2,
+      p {
+        text-align: center;
+      }
+    }
+
+    .illustration {
+      // overflow: hidden;
+      padding-bottom: 4rem;
+      position: relative;
+
+      .details {
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        margin-right: -2rem;
+        // padding-left: 2rem;
+
+        .spinning-icons {
+          width: 37.5vw;
+          height: 37.5vw;
+        }
+
+        .icon {
+          width: 20%;
+          max-width: 6rem;
+          margin-left: 0rem;
+        }
+
+        .plus-sign {
+          padding-top: 1rem;
+          padding-left: 1.5rem;
+          font-size: $font-size-h2;
+        }
+      }
+    }
+  }
+}
