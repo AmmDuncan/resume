@@ -737,6 +737,22 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const navbar = document.querySelector('.navbar');
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener('scroll', function (e) {
+        let nextSection = document.querySelector("#projects")
+
+        if (scrollY > nextSection.offsetTop - 70) {
+          navbar.classList.remove('rounded');
+        } else {
+          navbar.classList.add('rounded');
+        }
+      })
+    })
+  </script>
   <script src=" ./js/masonry.js" id="toRemove" defer></script>
   <script src="./js/reload_masonry.js" defer></script>
 </body>
