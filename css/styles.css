@@ -110,7 +110,7 @@ body:after {
   height: 100%;
   z-index: 9999;
   pointer-events: none;
-  opacity: 0.09;
+  opacity: 0.085;
   background: url("../img/noise.jpg");
 }
 
@@ -893,6 +893,18 @@ p {
   color: #332e4b;
   color: rgba(255, 255, 255, 0.75);
 }
+@media screen and (max-width: 576px) {
+  .projects-header p {
+    max-width: 22rem;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .projects-header p {
+    max-width: 22rem;
+    font-size: 14px;
+  }
+}
 
 .project-cards {
   background-color: #3404b2;
@@ -922,9 +934,9 @@ p {
 .project-card {
   width: 100%;
   overflow: hidden;
-  padding: 0.35rem;
-  border-radius: 1rem;
-  box-shadow: 0 0.45rem 0.5rem -0.005rem rgba(51, 46, 75, 0.15), 0 0.15rem 1.5rem rgba(51, 46, 75, 0.05);
+  padding: 0.45rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.45rem 0.5rem -0.005rem rgba(37, 8, 112, 0.25), 0 0.15rem 1.5rem rgba(37, 8, 112, 0.1);
   background: rgba(255, 255, 255, 0.75);
   background: rgba(110, 61, 233, 0.95);
   border-bottom: 4px solid rgba(37, 8, 112, 0.4);
@@ -933,8 +945,9 @@ p {
   z-index: 1;
 }
 .project-card__image {
+  position: relative;
   width: 100%;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   object-fit: cover;
   object-position: center top;
 }
@@ -1075,7 +1088,7 @@ p {
 .about__header .skill__list li {
   display: flex;
   align-items: center;
-  margin: 12px 0;
+  margin: 8px 0;
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.3rem 0.75rem rgba(52, 4, 178, 0.1), 0 0.1rem 0.25rem rgba(52, 4, 178, 0.05);
